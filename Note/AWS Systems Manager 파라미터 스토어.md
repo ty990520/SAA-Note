@@ -1,4 +1,4 @@
-## AWS SSM Parameter Store
+## AWS Systems Manager Parameter Store
 
 - **정의**
   - **Parameter Store**는 AWS Systems Manager의 일부로, 애플리케이션 구성 데이터, 암호, 데이터베이스 문자열 등의 중요한 정보를 안전하게 중앙에서 저장하고 관리할 수 있는 서비스입니다.
