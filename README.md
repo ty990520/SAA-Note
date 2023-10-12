@@ -29,12 +29,15 @@
 - Amazon MQ
 - Amazon Simple Notification Service(Amazon SNS)
 - Amazon Simple Queue Service(Amazon SQS)
+  - 마이크로서비스, 분산 시스템 및 서버리스 애플리케이션을 분리하고 확장할 수 있는 완전관리형 메시지 대기열 서비스
 - AWS Step Functions
 
 ## AWS 비용 관리
 - AWS Budgets
 - AWS Cost and Usage Report
 - AWS Cost Explorer
+  - 비용과 사용량을 보고서를 사용하여 분석할 수 있는 도구
+  - 세분화된 필터링 기능을 사용하여 리소스 비용에 대한 심층 분석 가능
 - Savings Plans
 
 ## 컴퓨팅
@@ -60,6 +63,8 @@
 - Amazon Aurora Serverless
 - Amazon DocumentDB (with MongoDB compatibility)
 - Amazon DynamoDB
+  - 용량에 맞게 테이블을 자동 조정하므로 별도의 관리 필요 없이 성능 유지 가능 (RDS와의 차이점)
+  - 확장성이 뛰어나고 밀리초 단위의 액세스를 지원
 - Amazon ElastiCache
 - Amazon Keyspaces (for Apache Cassandra)
 - Amazon Neptune
@@ -101,6 +106,8 @@
 - AWS Command Line Interface(AWS CLI)
 - AWS Compute Optimizer
 - AWS Config
+  - AWS 리소스 구성을 측정,감사,평가할 수 있는 서비스
+  - AWS 리소스 구성을 지속적으로 모니터링 및 기록하고, 원하는 구성을 기준으로 기록된 구성을 자동으로 평가해줌 
 - AWS Control Tower
 - AWS License Manager
 - Amazon Managed Grafana
@@ -162,7 +169,7 @@
   - 트래픽 흐름 검사 및 트래픽 필터링 기능 제공
 - AWS Resource Access Manager(AWS RAM)
 - AWS Secrets Manager
-  - RDS 또는 Aurora의 자격증명을 여러 리전에서 교체하기 위한 솔루션ㅑㅑ
+  - RDS 또는 Aurora의 자격증명을 여러 리전에서 교체하기 위한 솔루션
   - 자동으로 데이터베이스 비밀번호 교체 지원
 - AWS Security Hub
 - AWS Shield
