@@ -70,6 +70,7 @@
 - Amazon Neptune
 - Amazon Quantum Ledger Database(Amazon QLDB)
 - Amazon RDS
+  - Auto Scaling을 지원 x 
 - Amazon Redshift
 - Amazon Timestream
 
@@ -107,6 +108,7 @@
 - AWS Command Line Interface(AWS CLI)
 - AWS Compute Optimizer
 - AWS Config
+  - AWS 리소스의 구성을 추적하고, 원하는 설정과 리소스의 현재 구성이 일치하는지 확인 
   - AWS 리소스 구성을 측정,감사,평가할 수 있는 서비스
   - AWS 리소스 구성을 지속적으로 모니터링 및 기록하고, 원하는 구성을 기준으로 기록된 구성을 자동으로 평가해줌 
 - AWS Control Tower
@@ -138,11 +140,17 @@
 
 ## 네트워킹 및 콘텐츠 전송
 - Amazon CloudFront
+  - 전 세계에 분산된 엣지 로케이션에서 사용자에게 콘텐츠를 더 빠르게 제공 가능 (CDN)
 - AWS Direct Connect
 - Elastic Load Balancing(ELB)
 - AWS Global Accelerator
+  - 네트워크 가속 서비스
+  - 사용자를 가장 낮은 지연 시간으로 AWS 엔드포인트로 라우팅
+  - 지역 간 자동 장애 조치를 제공하여 한 지역에서의 실패 시 트래픽을 다른 지역으로 자동으로 리라우팅
 - AWS PrivateLink
 - Amazon Route 53
+  - 사용자의 도메인에 대한 DNS 레코드를 관리
+  - 다양한 라우팅 정책(예: 지연 시간 기반, 지역 기반, 가중치 기반 라우팅 등)을 제공하여, 글로벌 트래픽을 지능적으로 라우팅 가능
 - AWS Transit Gateway
 - Amazon VPC
 - AWS VPN
@@ -155,6 +163,8 @@
 - Amazon Cognito
 - Amazon Detective
 - AWS Directory Service
+  -  사용자 정보를 관리하고 조직의 컴퓨터와 기타 리소스를 연결해주는 서비스
+  -  사용자의 인증 및 권한 부여, 디렉터리 기반의 ID 관리 서비스
 - AWS Firewall Manager
   - 중앙에서 방화벽 규칙을 관리하는 서비스
   - 조직의 여러 계정 및 리소스에 대한 WAF 규칙, Shield Advanced 보호, VPC 보안그룹 및 Network Firewall 및 Route53 Resolver DNS Firewall 규칙을 중앙에서 구성할 수 있음
