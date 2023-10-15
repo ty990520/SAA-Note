@@ -100,6 +100,7 @@
 - AWS CloudFormation
 - AWS CloudTrail
 - Amazon CloudWatch
+  - 외부사용자와 대시보드를 공유하려는 경우, 간단하게 계정을 등록해서 url로 대시보드 공유 가능 
   -  CloudWatch Logs
       -   주로 로그 모니터링 및 알람 설정에 사용
       -   로그에 대한 복잡한 SQL 쿼리를 실행하는 데에는 적합하지 않음
