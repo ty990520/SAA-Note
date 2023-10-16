@@ -100,7 +100,9 @@
 - AWS Auto Scaling
 - AWS CloudFormation
 - AWS CloudTrail
-- Amazon CloudWatch
+  - 리소스 내역 기록 (로깅 서비스)
+  - AWS 인프라 전체에서 계정의 활동을 로그하고, 지속적으로 모니터링하여 스토리지, 분석 및 해결 작업을 제어할 수 있음 
+- Amazon CloudWatch (모니터링 서비스)
   - 외부사용자와 대시보드를 공유하려는 경우, 간단하게 계정을 등록해서 url로 대시보드 공유 가능 
   -  CloudWatch Logs
       -   주로 로그 모니터링 및 알람 설정에 사용
@@ -121,6 +123,7 @@
 - AWS Proton
 - AWS Service Catalog
 - AWS Systems Manager
+  -  
 - AWS Trusted Advisor
 - AWS Well-Architected Tool
 
@@ -144,7 +147,7 @@
 - AWS Direct Connect
 - Elastic Load Balancing(ELB)
 - AWS Global Accelerator
-  - 네트워크 가속 서비스
+  - 네트워크 가속 서비스 (TCP/UDP 4계층에서 동작)
   - 사용자를 가장 낮은 지연 시간으로 AWS 엔드포인트로 라우팅
   - 지역 간 자동 장애 조치를 제공하여 한 지역에서의 실패 시 트래픽을 다른 지역으로 자동으로 리라우팅
 - AWS PrivateLink
@@ -173,6 +176,8 @@
   - AWS 계정 및 환경에서 악의적 활동을 모니터링하고 상세한 보안 결과를 제공하여 가시성 및 해결을 촉진하는 위협 탐지 서비스
 - AWS Identity and Access Management(IAM)
 - Amazon Inspector
+  - 보안취약점 자동 스캔 -> 권장사항 알림 (자동 조치 X)
+  - AWS 환경에서의 애플리케이션 보안 상태를 주기적으로 검사하고, 발견된 취약점이나 문제점에 대한 권장 사항을 제공
 - AWS Key Management Service(AWS KMS)
 - Amazon Macie
 - AWS Network Firewall
@@ -184,6 +189,10 @@
   - 자동으로 데이터베이스 비밀번호 교체 지원
 - AWS Security Hub
 - AWS Shield
+  - DDoS 방어 서비스
+  - 두 가지 버전 존재
+    - AWS Shield Standard : 소규모 공격에 적합
+    - AWS Shield Advanced : 대규모 공격에 적합   
 - AWS Single Sign-On
 - AWS WAF
 
