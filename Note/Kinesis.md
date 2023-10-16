@@ -3,37 +3,41 @@
 
 Kinesis Data Streams와 Kinesis Data Firehose 두 서비스로 분류됨
 
-<br>
+[참고 블로그](https://jaeyeong951.medium.com/aws-kinesis-data-stream-vs-data-firehose-10102d949741)
 
-### Kinesis Data Streams (KDS)
-
-1. **Custom Consumer**: KDS는 사용자가 자신의 데이터 소비자(예: EC2 인스턴스에서 실행 중인 애플리케이션)를 작성하고 관리해야 합니다. 이는 훨씬 더 유연한 환경을 제공하지만, 관리 부담도 증가합니다.
-
-2. **Real-time Processing**: KDS는 실시간 데이터 처리에 초점을 맞춰, 데이터를 스트림에서 거의 실시간으로 소비할 수 있도록 합니다.
-
-3. **Manual Scaling**: KDS의 샤드(shard)라고 하는 스트림 용량 단위를 수동으로 스케일링해야 합니다.
-
-4. **Retention Period**: KDS는 기본적으로 24시간 동안 데이터를 유지하며, 최대 7일까지 확장할 수 있습니다.
 
 <br>
 
-### Kinesis Data Firehose (KDF)
+### 1. Kinesis Data Streams (KDS) - low latency streaming service
+**Kinesis Data Streams**는 실시간 데이터 스트림을 제공하는 서비스입니다. 이 서비스는 대량의 실시간 데이터를 연속적으로 수집하고, 처리하여 다양한 대상으로 전송하는 데 사용됩니다.
+- Kinesis Data Stream 은 실시간으로 data 들을 받아들일 수 있는 입구이자 저장소로서의 역할
+- 한 시스템이 실시간으로 Data Stream 에 데이터를 전송하면 해당 Data Stream 을 listening 하고있던 다른 한 시스템이 해당 데이터를 받아 처리
+- pipeline 이자 메시지 큐와 비슷한 역할
 
-1. **Fully Managed Service**: KDF는 완전 관리형 서비스로서, 데이터를 로드하고, 변환하고, 전달하는 과정을 사용자 대신 관리합니다.
 
-2. **Near Real-time**: KDF는 거의 실시간(수 초의 지연 시간을 가짐)으로 데이터를 로드합니다.
-
-3. **Automatic Scaling**: KDF는 자동으로 스케일링을 처리하므로, 사용자는 이에 대해 걱정할 필요가 없습니다.
-
-4. **No Data Storage**: KDF는 데이터를 자체적으로 저장하지 않고, 다른 AWS 서비스(예: S3, Redshift, Elasticsearch 등)로 전달합니다.
-
-5. **Transformations**: KDF는 데이터를 다른 AWS 서비스로 전송하기 전에 AWS Lambda를 통한 데이터 변환 기능을 제공합니다.
+**특징 및 사용 케이스**:
+- **실시간 데이터 수집**: 웹 사이트 클릭 스트림, 로그, 소셜 미디어, 그리고 다른 실시간 소스에서 발생하는 데이터를 연속적으로 수집할 수 있습니다.
+- **커스텀 처리**: KDS는 AWS Lambda, Amazon EC2, Kinesis Data Analytics와 같은 다양한 소비자로 데이터를 전송하여 실시간 분석 및 다른 처리 작업을 할 수 있게 합니다.
+- **장기 보존**: KDS는 최대 7일 동안 데이터를 보존할 수 있습니다.
 
 <br>
 
-### 요약
+### 2. Kinesis Data Firehose (KDF) - data transfer service
+**Kinesis Data Firehose**는 실시간 데이터를 쉽게 로드하고 분석하기 위해 자동으로 다양한 AWS 서비스로 스트리밍할 수 있도록 설계된 완전 관리형 서비스입니다.
+- Kinesis Data Firehose 의 주목적은 미리 정의된 목적지(Destination)에 데이터를 안전하게 전달(Deliver)하는 것
+  - 여기서 목적지라 함은 S3 bucket, ElasticSearch, Amazon Redshift 등 -> data lake의 역할
 
-- **Kinesis Data Streams**: 높은 유연성을 제공하지만, 사용자가 더 많은 관리 작업을 수행해야 합니다.
-  
-- **Kinesis Data Firehose**: 사용자 친화적이고 완전 관리형 서비스로서, 다양한 AWS 목적지로 데이터를 손쉽게 전달할 수 있습니다.
+
+**특징 및 사용 케이스**:
+- **완전 관리형 서비스**: KDF는 데이터를 자동으로 수집, 변환 및 전송하는 관리형 서비스입니다.
+- **데이터 변환**: AWS Lambda를 사용하여 데이터를 처리하고 변환할 수 있습니다.
+- **다양한 대상 지원**: Amazon S3, Amazon Redshift, Amazon Elasticsearch Service, Splunk 등 다양한 대상에 데이터를 전송할 수 있습니다.
+
+
+<br>
+
+**요약**
+- KDS (Kinesis Data Streams)는 `실시간 데이터 수집`에 중점
+- KDF (Kinesis Data Firehose)는 `자동화된 데이터 전송과 변환`에 중점
+- Data Stream 은 길게는 일주일 까지 데이터를 잠시 저장할 수 있지만 (Stream 의 역할을 하기 때문에), Firehose 는 데이터를 잠시라도 들고있을 수 없음 (말그대로 Transfer 의 역할만 수행)
 
