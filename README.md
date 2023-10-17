@@ -2,6 +2,8 @@
 
 ## 분석
 - Amazon Athena
+  - S3버킷에 저장된 데이터를 분석하는 서버리스 쿼리 서비스
+  - 서버리스 SQL엔진을 사용한 S3 데이터 분석 시 사용
 - AWS Data Exchange
 - AWS Data Pipeline
 - Amazon EMR
@@ -12,6 +14,7 @@
     -   데이터 웨어하우징 및 데이터 통합에서 널리 사용
     -   다양한 데이터 소스에서 데이터를 추출, 변환, 로드하는 작업을 자동화하고 관리
 - Amazon Kinesis
+  - 수 천 개의 edge 장치로부터 경고 수집 및 저장
 - AWS Lake Formation
 - Amazon Managed Streaming for Apache Kafka(Amazon MSK)
 - Amazon OpenSearch Service(Amazon Elasticsearch Service)
@@ -24,6 +27,9 @@
 
 ## 애플리케이션 통합
 - Amazon AppFlow
+  - SaaS 애플리케이션과 S3 및 RedShift와 같은 AWS서비스 간에 데이터를 안전하게 전송
+  - Salesforce, SAP, Zendesk, Slack, ServiceNow 등
+  - 완전 관리형
 - AWS AppSync
 - Amazon EventBridge(Amazon CloudWatch Events)
 - Amazon MQ
@@ -43,6 +49,8 @@
 ## 컴퓨팅
 - AWS Batch
 - Amazon EC2
+  - 비용 절감 -> 예약 인스턴스 사용
+  - 용량 보장 -> 온디맨드 용량 예약 
 - Amazon EC2 Auto Scaling
 - AWS Elastic Beanstalk
 - AWS Outposts
@@ -118,6 +126,7 @@
 - Amazon Managed Grafana
 - Amazon Managed Service for Prometheus
 - AWS Management Console
+  - 웹 기반 인터페이스 (흔히 말하는 웹 콘솔) 
 - AWS Organizations
 - AWS Personal Health Dashboard
 - AWS Proton
@@ -145,6 +154,8 @@
 - Amazon CloudFront
   - 전 세계에 분산된 엣지 로케이션에서 사용자에게 콘텐츠를 더 빠르게 제공 가능 (CDN)
 - AWS Direct Connect
+  - 온프레미스 환경과 AWS 간의 전용 네트워크 연결 (전용선)
+  - 인터넷 대역폭을 사용하지 않고 AWS와 직접 연결을 통해 데이터를 전송   
 - Elastic Load Balancing(ELB)
 - AWS Global Accelerator
   - 네트워크 가속 서비스 (TCP/UDP 4계층에서 동작)
@@ -162,6 +173,7 @@
 - AWS Artifact
 - AWS Audit Manager
 - AWS Certificate Manager(ACM)
+  - CloudFront 사용 시 us-east-1(버지니아 북부)에서만 ACM 사용 가능 (그 외에는 상관없음)
 - AWS CloudHSM
 - Amazon Cognito
 - Amazon Detective
@@ -178,8 +190,11 @@
 - Amazon Inspector
   - 보안취약점 자동 스캔 -> 권장사항 알림 (자동 조치 X)
   - AWS 환경에서의 애플리케이션 보안 상태를 주기적으로 검사하고, 발견된 취약점이나 문제점에 대한 권장 사항을 제공
+  - 호스트 수준의 취약성 평가 o, 콘텐츠 자체를 스캔하지는 않음 (Macie와의 차이점)
 - AWS Key Management Service(AWS KMS)
 - Amazon Macie
+  - 개인 식별 정보(PII)와 같은 민감한 데이터를 자동으로 검색, 분류, 보호하는 관리형 서비스
+  - S3에서 Macie를 활성화하면 업로드된 객체에서 PII를 자동으로 검색
 - AWS Network Firewall
   - VPC로 들어오고 나가는 네트워크 트래픽을 필터링할 수 있음
   - 트래픽 흐름 검사 및 트래픽 필터링 기능 제공
@@ -204,8 +219,19 @@
 ## 스토리지
 - AWS Backup
 - Amazon Elastic Block Store(Amazon EBS)
+  - 하나의 EC2 인스턴스와 연결됨
 - Amazon Elastic File System(Amazon EFS)
+  - 표준 파일 시스템
+  - 자동 확장되며 가용성이 높음
+  - 여러 EC2 인스턴스에서 동시 접속 가능 
 - Amazon FSx(모든 유형)
+  - 완전관리형 파일 스토리지
+  - NetApp ONTAP, OpenZFS, Windows File Server, Lustre의 4가지 파일시스템을 지원
 - Amazon S3
+  - 일반적인 객체 저장 및 빠른 액세스에 적합
+  - 거의 즉시 액세스 가능
 - Amazon S3 Glacier
+  - 장기적인 아카이빙 및 백업에 특화
+  - 접근 빈도가 낮은 데이터를 매우 저렴한 비용으로 저장 가능
+  - 검색 느림
 - AWS Storage Gateway
