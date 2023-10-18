@@ -13,6 +13,7 @@
     -   ETL 작업을 위한 서비스 (Extract, Transform, Load)
     -   데이터 웨어하우징 및 데이터 통합에서 널리 사용
     -   다양한 데이터 소스에서 데이터를 추출, 변환, 로드하는 작업을 자동화하고 관리
+    -   주로 배치 작업에 사용되기 때문에 실시간 처리보다는 약간의 지연이 발생
 - Amazon Kinesis
   - 수 천 개의 edge 장치로부터 경고 수집 및 저장
 - AWS Lake Formation
@@ -75,6 +76,10 @@
 - Amazon DynamoDB
   - 용량에 맞게 테이블을 자동 조정하므로 별도의 관리 필요 없이 성능 유지 가능 (RDS와의 차이점)
   - 확장성이 뛰어나고 밀리초 단위의 액세스를 지원
+  - 주문형 백업 : 전체 백업을 즉시 생성
+  - 전역 테이블 : 데이터를 여러 AWS 리전에 자동으로 복제
+  - 글로벌 보조 인덱스 : 특정 속성에 대한 추가적인 인덱스를 생성하여 다양한 방법으로 빠르게 쿼리 가능
+  - 지정 시간 복구(Point-In-Time Recovery, PITR) : 최근 35일 동안의 데이터를 복구 (지속적인 백업x)
 - Amazon ElastiCache
 - Amazon Keyspaces (for Apache Cassandra)
 - Amazon Neptune
@@ -155,7 +160,12 @@
 - AWS Application Discovery Service
 - AWS Application Migration Service(CloudEndure Migration)
 - AWS Database Migration Service(AWS DMS)
+  - 데이터베이스 마이그레이션
 - AWS DataSync
+  - 파일(스토리지) 기반 데이터 전송
+  - 온프레미스 스토리지에서 Amazon S3, EFS, FSx로의 데이터 전송
+  - 데이터 백업, 데이터 복제 및 데이터 복원
+  - 빠른 데이터 전송 속도, 대량의 데이터 전송에 최적화
 - AWS Migration Hub
 - AWS Server Migration Service(AWS SMS)
 - AWS Snow Family
