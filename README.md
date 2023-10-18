@@ -52,8 +52,11 @@
 ## 컴퓨팅
 - AWS Batch
 - Amazon EC2
-  - 비용 절감 -> 예약 인스턴스 사용
-  - 용량 보장 -> 온디맨드 용량 예약 
+  - 예약 인스턴스 : 미리 해당 서버를 구입하여 사용 -> 비용 절감
+  - 온디맨드 인스턴스 : 사용한 만큼 비용을 나중에 지불 
+    - 온디맨드 용량 예약 : 용량 보장
+  - 스팟 인스턴스 : AWS내에서 남아있는 서버 공간을 빌려서 사용하는 방식 -> 도중에 중지될 가능성이 높음
+    - 스팟 블록 : 기간이 정해져있는 스팟 인스턴스 
 - Amazon EC2 Auto Scaling
 - AWS Elastic Beanstalk
 - AWS Outposts
@@ -150,6 +153,7 @@
 - AWS Systems Manager
   -  
 - AWS Trusted Advisor
+  -  현재 구성에서 비용 절감, 성능 향상, 보안 강화에 도움되는 권장 사항을 제시
 - AWS Well-Architected Tool
 
 ## 미디어 서비스
