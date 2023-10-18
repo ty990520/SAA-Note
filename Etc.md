@@ -39,3 +39,7 @@
 -  __Amazon FSx 파일 게이트웨이__
     -   온프레미스 환경에서 Amazon FSx에 데이터를 저장하도록 통합하는 서비스
     -   Windows File Server + AWS로 이동 = Amazon FSx File Gateway
+
+-  __RPO (복구 시점 목표) & RTO (복구 시간 목표)__
+    -   RPO (복구 시점 목표) : 데이터 손실이 발생한 경우, 최대 15분의 데이터만 손실될 수 있음
+    -   RTO (복구 시간 목표) : 데이터 손실 또는 시스템 중단 후 최대 1시간 내로 시스템을 복구해야 함
