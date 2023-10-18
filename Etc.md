@@ -35,3 +35,7 @@
 
 -  __Amazon S3 파일 게이트웨이__
     -   온프레미스 환경에서 Amazon S3에 데이터를 저장하도록 통합하는 서비스
+
+-  __Amazon FSx 파일 게이트웨이__
+    -   온프레미스 환경에서 Amazon FSx에 데이터를 저장하도록 통합하는 서비스
+    -   Windows File Server + AWS로 이동 = Amazon FSx File Gateway
