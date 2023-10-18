@@ -36,6 +36,8 @@
 - Amazon Simple Notification Service(Amazon SNS)
 - Amazon Simple Queue Service(Amazon SQS)
   - 마이크로서비스, 분산 시스템 및 서버리스 애플리케이션을 분리하고 확장할 수 있는 완전관리형 메시지 대기열 서비스
+  - API
+    - ChangeMessageVisibility: 처리 중인 메시지의 가시성 시간을 변경
 - AWS Step Functions
 
 ## AWS 비용 관리
@@ -93,14 +95,23 @@
 
 ## 기계 학습
 - Amazon Comprehend
+  - 자연어 처리
+  - 텍스트에서 유용한 인사이트를 도출
+  - Amazon Comprehend Medical
+    - 의료 데이터 추출 
 - Amazon Forecast
 - Amazon Fraud Detector
 - Amazon Kendra
 - Amazon Lex
 - Amazon Polly
 - Amazon Rekognition
+  - 이미지 인식 및 비디오 분석을 자동화
+  - 부적절하거나 불쾌감을 주는 콘텐츠를 감지
+  - 얼굴 및 텍스트 탐지
 - Amazon SageMaker
+  - 사용자가 기계 학습 모델을 쉽게 구축, 학습, 배포할 수 있도록 지원하는 플랫폼 
 - Amazon Textract
+  - 텍스트 추출 
 - Amazon Transcribe
 - Amazon Translate
 
@@ -155,7 +166,8 @@
   - 전 세계에 분산된 엣지 로케이션에서 사용자에게 콘텐츠를 더 빠르게 제공 가능 (CDN)
 - AWS Direct Connect
   - 온프레미스 환경과 AWS 간의 전용 네트워크 연결 (전용선)
-  - 인터넷 대역폭을 사용하지 않고 AWS와 직접 연결을 통해 데이터를 전송   
+  - 인터넷 대역폭을 사용하지 않고 AWS와 직접 연결을 통해 데이터를 전송
+  - 일관된 짧은 지연 시간과 고성능의 연결 
 - Elastic Load Balancing(ELB)
 - AWS Global Accelerator
   - 네트워크 가속 서비스 (TCP/UDP 4계층에서 동작)
@@ -168,6 +180,7 @@
 - AWS Transit Gateway
 - Amazon VPC
 - AWS VPN
+  - Direct Connect 연결이 실패한 경우에 백업으로 작동 가능 (느린 트래픽을 허용하는 경우)
 
 ## 보안, 아이덴티티 및 규정 준수
 - AWS Artifact
@@ -202,6 +215,7 @@
 - AWS Secrets Manager
   - RDS 또는 Aurora의 자격증명을 여러 리전에서 교체하기 위한 솔루션
   - 자동으로 데이터베이스 비밀번호 교체 지원
+  - 애플리케이션에 자격증명 하드코딩 제거 가능
 - AWS Security Hub
 - AWS Shield
   - DDoS 방어 서비스
@@ -214,6 +228,7 @@
 ## 서버리스
 - AWS AppSync
 - AWS Fargate
+  - EC2인스턴스의 서버나 클러스터를 관리할 필요 없이 컨테이너를 실행하기 위해 ECS에 사용할 수 있는 기술 
 - AWS Lambda
 
 ## 스토리지
