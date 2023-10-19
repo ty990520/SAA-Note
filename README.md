@@ -14,6 +14,7 @@
     -   데이터 웨어하우징 및 데이터 통합에서 널리 사용
     -   다양한 데이터 소스에서 데이터를 추출, 변환, 로드하는 작업을 자동화하고 관리
     -   주로 배치 작업에 사용되기 때문에 실시간 처리보다는 약간의 지연이 발생
+    -   작업 북마크 : 이미 처리된 데이터를 다시 처리하지 않도록 함
 - Amazon Kinesis
   - 수 천 개의 edge 장치로부터 경고 수집 및 저장
 - AWS Lake Formation
@@ -34,11 +35,11 @@
 - AWS AppSync
 - Amazon EventBridge(Amazon CloudWatch Events)
 - Amazon MQ
+  - Apache ActiveMQ 및 RabbitMQ용 관리형 메시지 브로커 서비스
 - Amazon Simple Notification Service(Amazon SNS)
 - Amazon Simple Queue Service(Amazon SQS)
   - 마이크로서비스, 분산 시스템 및 서버리스 애플리케이션을 분리하고 확장할 수 있는 완전관리형 메시지 대기열 서비스
-  - API
-    - ChangeMessageVisibility: 처리 중인 메시지의 가시성 시간을 변경
+  - 가시성 시간 제한 : 다른 소비자가 메시지를 처리할 수 없도록 차단하는 시간
 - AWS Step Functions
 
 ## AWS 비용 관리
@@ -173,11 +174,19 @@
 - AWS Migration Hub
 - AWS Server Migration Service(AWS SMS)
 - AWS Snow Family
+  - AWS Snowcone : 작은 양의 데이터(8TB)를 이동할 때 사용
+  - AWS Snowball : 더 큰 데이터를 이동할 때 사용
+    - Snowball Standard : 50TB 또는 80TB의 용량
+    - Snowball Edge : 100TB 이상의 용량
+  - AWS Snowmobile : 매우 큰 양의 데이터(수PB)를 전송하는 데 사용
 - AWS Transfer Family
+  - SFTP, FTPS, FTP 프로토콜을 지원하여 실시간 파일 전송을 제공
+  - 다른 사용자와의 파일 공유나 업로드 및 다운로드 지원 
 
 ## 네트워킹 및 콘텐츠 전송
 - Amazon CloudFront
   - 전 세계에 분산된 엣지 로케이션에서 사용자에게 콘텐츠를 더 빠르게 제공 가능 (CDN)
+  - DDoS 대처 가능, 가용성 보호
 - AWS Direct Connect
   - 온프레미스 환경과 AWS 간의 전용 네트워크 연결 (전용선)
   - 인터넷 대역폭을 사용하지 않고 AWS와 직접 연결을 통해 데이터를 전송
