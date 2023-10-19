@@ -194,8 +194,9 @@
 - Elastic Load Balancing(ELB)
 - AWS Global Accelerator
   - 네트워크 가속 서비스 (TCP/UDP 4계층에서 동작)
-  - 사용자를 가장 낮은 지연 시간으로 AWS 엔드포인트로 라우팅
-  - 지역 간 자동 장애 조치를 제공하여 한 지역에서의 실패 시 트래픽을 다른 지역으로 자동으로 리라우팅
+  - 지능형 라우팅
+    - 사용자의 요청을 받아 가장 가까운 엣지 위치로 라우팅 
+    - 지역 간 자동 장애 조치를 제공하여 한 지역에서의 실패 시 트래픽을 다른 지역으로 자동으로 리라우팅
 - AWS PrivateLink
 - Amazon Route 53
   - 사용자의 도메인에 대한 DNS 레코드를 관리
@@ -246,6 +247,7 @@
     - AWS Shield Standard : 소규모 공격에 적합
     - AWS Shield Advanced : 대규모 공격에 적합   
 - AWS Single Sign-On
+  - 한 번 로그인하면 연관된 서비스들을 추가 로그인 없이 사용할 수 있게 함 
 - AWS WAF
 
 ## 서버리스
