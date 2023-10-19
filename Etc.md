@@ -46,6 +46,11 @@
 
 -  __S3 요청자 지불 버킷__
     -   버킷 소유자 대신 요청자가 버킷에서 데이터 다운로드 및 요청 비용을 지불
- 
+
+-  __Saving Plans__
+    -   1년 또는 3년 기간의 일정 사용량 약정을 조건으로 EC2, Lambda, Fargate 사용량에 대해 저렴한 요금을 제공하는 유연한 요금 모델
+    -   EC2 Savings Plans : Compute Savings Plans보다 더 할인율은 높지만 EC2만 한정
+    -   Compute Savings Plans : EC2 뿐만아니라 Lambda, Fargate까지 적용
+      
 -  포트번호
     -   Microsoft SQL Server : 1433 
