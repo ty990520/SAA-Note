@@ -34,9 +34,12 @@
   - 완전 관리형
 - AWS AppSync
 - Amazon EventBridge(Amazon CloudWatch Events)
+  - 서버리스 이벤트 브로커 
 - Amazon MQ
   - Apache ActiveMQ 및 RabbitMQ용 관리형 메시지 브로커 서비스
 - Amazon Simple Notification Service(Amazon SNS)
+  - pub/sub 모델 기반 푸시 알림 서비스
+  - 완전관리형 메시징 서비스
 - Amazon Simple Queue Service(Amazon SQS)
   - 마이크로서비스, 분산 시스템 및 서버리스 애플리케이션을 분리하고 확장할 수 있는 완전관리형 메시지 대기열 서비스
   - 가시성 시간 제한 : 다른 소비자가 메시지를 처리할 수 없도록 차단하는 시간
@@ -75,6 +78,7 @@
 
 ## 데이터베이스
 - Amazon Aurora
+  - Aurora 복제본 : 읽기작업 확장
 - Amazon Aurora Serverless
 - Amazon DocumentDB (with MongoDB compatibility)
 - Amazon DynamoDB
@@ -89,7 +93,8 @@
 - Amazon Neptune
 - Amazon Quantum Ledger Database(Amazon QLDB)
 - Amazon RDS
-  - Auto Scaling을 지원 x 
+  - Auto Scaling을 지원 x
+  - Amazon RDS Custom : 기존 OS 및 DB 환경 유지가 필요한 경우 사용(레거시, 사용자 지정, 패키지 어플리케이션)
 - Amazon Redshift
 - Amazon Timestream
 
@@ -166,6 +171,7 @@
 - AWS Application Migration Service(CloudEndure Migration)
 - AWS Database Migration Service(AWS DMS)
   - 데이터베이스 마이그레이션
+  - 지속적인 복제 : 온라인 상태를 유지하고 마이그레이션 중에 액세스 가능
 - AWS DataSync
   - 파일(스토리지) 기반 데이터 전송
   - 온프레미스 스토리지에서 Amazon S3, EFS, FSx로의 데이터 전송
@@ -194,10 +200,10 @@
 - Elastic Load Balancing(ELB)
 - AWS Global Accelerator
   - 네트워크 가속 서비스 (TCP/UDP 4계층에서 동작)
-  - 지능형 라우팅
-    - 사용자의 요청을 받아 가장 가까운 엣지 위치로 라우팅 
-    - 지역 간 자동 장애 조치를 제공하여 한 지역에서의 실패 시 트래픽을 다른 지역으로 자동으로 리라우팅
+  - 글로벌 IP 주소를 제공하여 사용자가 가장 가까운 엔드포인트로 트래픽을 라우팅할 수 있도록 지원
 - AWS PrivateLink
+  - 데이터를 인터넷에 노출하지 않고 VPC와 AWS 서비스 간에 연결을 설정
+  - VPC와 VPC를 연결하는 경우 VPC 내부에 있는 서비스에 모두 접근할 우려가 있으므로 VPC가 아니라 서비스를 대상으로 연결함 
 - Amazon Route 53
   - 사용자의 도메인에 대한 DNS 레코드를 관리
   - 다양한 라우팅 정책(예: 지연 시간 기반, 지역 기반, 가중치 기반 라우팅 등)을 제공하여, 글로벌 트래픽을 지능적으로 라우팅 가능
@@ -260,6 +266,7 @@
 - AWS Backup
 - Amazon Elastic Block Store(Amazon EBS)
   - 하나의 EC2 인스턴스와 연결됨
+  - 프로비저닝된 IOPS : 고성능이 필요한 애플리케이션에서 일관된 성능 제공
 - Amazon Elastic File System(Amazon EFS)
   - 표준 파일 시스템
   - 자동 확장되며 가용성이 높음
