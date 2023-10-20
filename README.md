@@ -18,6 +18,7 @@
 - Amazon Kinesis
   - 수 천 개의 edge 장치로부터 경고 수집 및 저장
 - AWS Lake Formation
+  - 데이터 레이크를 설정, 보호 및 관리 
 - Amazon Managed Streaming for Apache Kafka(Amazon MSK)
 - Amazon OpenSearch Service(Amazon Elasticsearch Service)
 - Amazon QuickSight
@@ -79,6 +80,7 @@
 ## 데이터베이스
 - Amazon Aurora
   - Aurora 복제본 : 읽기작업 확장
+  - 자동 백업 : 최대 35일 동안만 백업을 보관
 - Amazon Aurora Serverless
 - Amazon DocumentDB (with MongoDB compatibility)
 - Amazon DynamoDB
@@ -147,12 +149,16 @@
   - AWS 리소스 구성을 측정,감사,평가할 수 있는 서비스
   - AWS 리소스 구성을 지속적으로 모니터링 및 기록하고, 원하는 구성을 기준으로 기록된 구성을 자동으로 평가해줌 
 - AWS Control Tower
+  - AWS Organizations의 확장 기능
+  - 데이터 상주 가드레일 : 데이터가 올바른 지역에 저장되도록 강제 
 - AWS License Manager
 - Amazon Managed Grafana
 - Amazon Managed Service for Prometheus
 - AWS Management Console
   - 웹 기반 인터페이스 (흔히 말하는 웹 콘솔) 
 - AWS Organizations
+  - AWS 계정의 중앙집중적인 관리
+  - 서비스 제어 정책 (SCPs) : 조직 전체,특정 계정에 대한 AWS 서비스의 사용을 제한
 - AWS Personal Health Dashboard
 - AWS Proton
 - AWS Service Catalog
@@ -274,6 +280,7 @@
 - Amazon FSx(모든 유형)
   - 완전관리형 파일 스토리지
   - NetApp ONTAP, OpenZFS, Windows File Server, Lustre의 4가지 파일시스템을 지원
+  - FSx for Lustre : HPC(고성능 컴퓨팅)
 - Amazon S3
   - 일반적인 객체 저장 및 빠른 액세스에 적합
   - 거의 즉시 액세스 가능
