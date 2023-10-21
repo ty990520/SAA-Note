@@ -51,6 +51,14 @@
     -   1년 또는 3년 기간의 일정 사용량 약정을 조건으로 EC2, Lambda, Fargate 사용량에 대해 저렴한 요금을 제공하는 유연한 요금 모델
     -   EC2 Savings Plans : Compute Savings Plans보다 더 할인율은 높지만 EC2만 한정
     -   Compute Savings Plans : EC2 뿐만아니라 Lambda, Fargate까지 적용
-      
+
+-  __가상 프라이빗 게이트웨이 (Virtual Private Gateway)__
+    -   VPC (Virtual Private Cloud)와 온프레미스 네트워크 간의 VPN 연결을 설정할 때 사용하는 게이트웨이
+
+-  __비 VPC 트래픽__
+    -   VPC 외부로 나가는 트래픽
+    -   VPC 내에서 실행되는 애플리케이션에서 온프레미스 데이터 센터의 데이터베이스에 접근할 때, 그 트래픽은 VPC 외부로 나가게 됨
+    -   이 경우, 해당 트래픽은 가상 프라이빗 게이트웨이로 라우팅되어 온프레미스 데이터 센터로 전달
+
 -  포트번호
     -   Microsoft SQL Server : 1433 
