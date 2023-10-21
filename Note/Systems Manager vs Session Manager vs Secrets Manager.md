@@ -15,6 +15,26 @@
 
 <br>
 
+### `SSM Parameter Store` vs `AWS Secrets Manager`
+
+1. **용도 및 기능**:
+   - Secrets Manager: 비밀번호, API 키 등의 `비밀 정보` 관리.
+   - Parameter Store: `일반 구성 데이터` 및 비밀 정보 저장.
+
+2. **비밀번호 회전**:
+   - Secrets Manager: `자동 회전` 지원.
+   - Parameter Store: 자동 회전 지원하지 않음.
+
+3. **가격**:
+   - Secrets Manager: 비용 발생 (저장된 비밀의 수 및 API 호출 횟수에 따름).
+   - Parameter Store: 무료 계층 제공, 일정량 이상의 요청이나 암호화된 파라미터 사용 시 요금 부과.
+
+4. **통합 및 호환성**:
+   - Secrets Manager: AWS 및 외부 서비스와의 통합 지원.
+   - Parameter Store: AWS 서비스와의 통합 지원, 외부 서비스 통합은 제한적.
+
+<br>
+
 ### `SSM Parameter Store`의 `SecureString` 옵션 vs `AWS Secrets Manager`
 
 - 공통점
@@ -26,6 +46,6 @@
          - 비용: `Parameter Store`의 표준 파라미터는 무료로 제공되며, 고급 파라미터에는 추가 비용이 발생할 수 있습니다.
     - **AWS Secrets Manager**:
          - 주요 목적은 암호, 토큰, API 키와 같은 민감한 정보를 관리하는 것입니다.
-         - 자동 암호 회전 기능이 내장되어 있어, 주기적으로 암호를 변경할 수 있습니다. 이는 RDS, Redshift, DocumentDB와 같은 AWS 데이터베이스 서비스와 통합되어 쉽게 암호 변경 작업을 자동화할 수 있습니다.
+         - `자동 암호 회전 기능`이 내장되어 있어, 주기적으로 암호를 변경할 수 있습니다. 이는 RDS, Redshift, DocumentDB와 같은 AWS 데이터베이스 서비스와 통합되어 쉽게 암호 변경 작업을 자동화할 수 있습니다.
          - 비용: 암호 저장 및 암호화 요청에 따른 비용이 있습니다.
 - 예를 들어, 주기적인 암호 변경 및 자동화가 필요한 경우 `Secrets Manager`가 더 적합할 수 있습니다. 반면, 단순한 구성 데이터나 계층 구조의 파라미터 저장에는 `Parameter Store`가 더 적합할 수 있습니다.
