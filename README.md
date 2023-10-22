@@ -64,6 +64,8 @@
     - 스팟 블록 : 기간이 정해져있는 스팟 인스턴스 
 - Amazon EC2 Auto Scaling
 - AWS Elastic Beanstalk
+  - 개발,테스트,프로덕션을 위한 환경 쉽게 생성 가능
+  - URL 스와핑 : 환경간의 트래픽을 쉽게 라우팅할 수 있음  
 - AWS Outposts
 - AWS Serverless Application Repository
 - VMware Cloud on AWS
@@ -72,6 +74,7 @@
 ## 컨테이너
 - Amazon Elastic Container Registry(Amazon ECR)
 - Amazon Elastic Container Service(Amazon ECS)
+  - taskRoleArn : ECS Task가 실행될 때 사용할 IAM 역할의 ARN을 지정 (ex. ECS Task가 Amazon S3 버킷에 접근해야 하는 경우) 
 - Amazon ECS Anywhere
 - Amazon Elastic Kubernetes Service(Amazon EKS)
 - Amazon EKS Anywhere
@@ -83,6 +86,7 @@
   - 자동 백업 : 최대 35일 동안만 백업을 보관
 - Amazon Aurora Serverless
 - Amazon DocumentDB (with MongoDB compatibility)
+  -  클라우드에서 MongoDB 호환 데이터베이스를 설정
 - Amazon DynamoDB
   - 용량에 맞게 테이블을 자동 조정하므로 별도의 관리 필요 없이 성능 유지 가능 (RDS와의 차이점)
   - 확장성이 뛰어나고 밀리초 단위의 액세스를 지원
@@ -129,7 +133,9 @@
 - Amazon Textract
   - 텍스트 추출 
 - Amazon Transcribe
+  - 음성을 텍스트로 자동 변환 
 - Amazon Translate
+  - 텍스트를 다른 언어로 번역
 
 ## 관리 및 거버넌스
 - AWS Auto Scaling
