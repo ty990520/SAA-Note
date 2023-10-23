@@ -8,6 +8,7 @@
 - AWS Data Pipeline
 - Amazon EMR
   - 빅 데이터 워크로드를 위한 클러스터 기반 서비스
+  - Kinesis Data Analytics보다 더 구성관리 복잡
   - Apache Hadoop 및 Apache Spark와 같은 분산 데이터 처리 프레임워크를 실행
 - AWS Glue
     -   ETL 작업을 위한 서비스 (Extract, Transform, Load)
@@ -20,6 +21,7 @@
 - AWS Lake Formation
   - 데이터 레이크를 설정, 보호 및 관리 
 - Amazon Managed Streaming for Apache Kafka(Amazon MSK)
+  - 데이터 스트리밍 
 - Amazon OpenSearch Service(Amazon Elasticsearch Service)
 - Amazon QuickSight
   - 데이터 시각화 서비스
@@ -99,7 +101,7 @@
 - Amazon Neptune
 - Amazon Quantum Ledger Database(Amazon QLDB)
 - Amazon RDS
-  - Auto Scaling을 지원 x
+  - 스토리지 Auto Scaling : 디스크 공간 부족 시 RDS 용량 자동 증가 (EC2처럼 RDS의 수를 자동으로 확장x)
   - Amazon RDS Custom : 기존 OS 및 DB 환경 유지가 필요한 경우 사용(레거시, 사용자 지정, 패키지 어플리케이션)
 - Amazon Redshift
 - Amazon Timestream
@@ -169,13 +171,13 @@
 - AWS Proton
 - AWS Service Catalog
 - AWS Systems Manager
-  -  
 - AWS Trusted Advisor
   -  현재 구성에서 비용 절감, 성능 향상, 보안 강화에 도움되는 권장 사항을 제시
 - AWS Well-Architected Tool
 
 ## 미디어 서비스
 - Amazon Elastic Transcoder
+  -  오디오 및 비디오 파일을 웹 또는 모바일 장치에서 재생할 수 있는 형식으로 변환
 - Amazon Kinesis Video Streams
 
 ## 마이그레이션 및 전송
@@ -189,6 +191,7 @@
   - 온프레미스 스토리지에서 Amazon S3, EFS, FSx로의 데이터 전송
   - 데이터 백업, 데이터 복제 및 데이터 복원
   - 빠른 데이터 전송 속도, 대량의 데이터 전송에 최적화
+  - 대역폭의 양을 제어 가능 -> 다른 서비스에 미치는 영향을 최소화
 - AWS Migration Hub
 - AWS Server Migration Service(AWS SMS)
 - AWS Snow Family
@@ -284,10 +287,11 @@
 - Amazon Elastic File System(Amazon EFS)
   - 표준 파일 시스템
   - 자동 확장되며 가용성이 높음
-  - 여러 EC2 인스턴스에서 동시 접속 가능 
+  - 여러 EC2 인스턴스에서 동시 접속 가능
+  - 리전 내의 여러 AZ에 데이터를 저장 -> 중복성(데이터의 복사본을 여러 위치에 저장)
 - Amazon FSx(모든 유형)
   - 완전관리형 파일 스토리지
-  - NetApp ONTAP, OpenZFS, Windows File Server, Lustre의 4가지 파일시스템을 지원
+  - NetApp ONTAP(NFS,SMB 모두 지원), OpenZFS, Windows File Server, Lustre의 4가지 파일시스템을 지원
   - FSx for Lustre : HPC(고성능 컴퓨팅)
 - Amazon S3
   - 일반적인 객체 저장 및 빠른 액세스에 적합
@@ -297,3 +301,6 @@
   - 접근 빈도가 낮은 데이터를 매우 저렴한 비용으로 저장 가능
   - 검색 느림
 - AWS Storage Gateway
+  - 캐시된 볼륨 게이트웨이 (Cached Volumes) : 클라우드에 대한 의존도가 높고, 로컬 스토리지 비용을 줄이려는 환경에 적합
+  - 저장된 볼륨 게이트웨이 (Stored Volumes) : 로컬 환경에 대한 의존도가 높음, 데이터를 클라우드에 백업해야 하는 환경에 적합
+  - 테이프 게이트웨이(Tape Gateway) : 기존의 테이프 기반 백업 인프라를 클라우드로 확장
