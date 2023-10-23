@@ -87,6 +87,8 @@
   - Aurora 복제본 : 읽기작업 확장
   - 자동 백업 : 최대 35일 동안만 백업을 보관
 - Amazon Aurora Serverless
+  - 데이터베이스의 크기를 수동으로 선택할 필요 없음
+  - 사용량이 없을 때는 데이터베이스 인스턴스를 자동으로 종료
 - Amazon DocumentDB (with MongoDB compatibility)
   -  클라우드에서 MongoDB 호환 데이터베이스를 설정
 - Amazon DynamoDB
@@ -208,6 +210,7 @@
 - Amazon CloudFront
   - 전 세계에 분산된 엣지 로케이션에서 사용자에게 콘텐츠를 더 빠르게 제공 가능 (CDN)
   - DDoS 대처 가능, 가용성 보호
+  - 데이터 전송 비용 절감
 - AWS Direct Connect
   - 온프레미스 환경과 AWS 간의 전용 네트워크 연결 (전용선)
   - 인터넷 대역폭을 사용하지 않고 AWS와 직접 연결을 통해 데이터를 전송
@@ -245,7 +248,7 @@
   - 계정 보호 서비스
   - AWS 계정 및 환경에서 악의적 활동을 모니터링하고 상세한 보안 결과를 제공하여 가시성 및 해결을 촉진하는 위협 탐지 서비스
 - AWS Identity and Access Management(IAM)
-- Amazon Inspector
+- Amazon Inspector (검사기)
   - 보안취약점 자동 스캔 -> 권장사항 알림 (자동 조치 X)
   - AWS 환경에서의 애플리케이션 보안 상태를 주기적으로 검사하고, 발견된 취약점이나 문제점에 대한 권장 사항을 제공
   - 호스트 수준의 취약성 평가 o, 콘텐츠 자체를 스캔하지는 않음 (Macie와의 차이점)
