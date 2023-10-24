@@ -259,6 +259,7 @@
 - AWS Network Firewall
   - VPC로 들어오고 나가는 네트워크 트래픽을 필터링할 수 있음
   - 트래픽 흐름 검사 및 트래픽 필터링 기능 제공
+  - 특정 도메인을 지정하여 접근을 허용하거나 차단 가능
 - AWS Resource Access Manager(AWS RAM)
 - AWS Secrets Manager
   - RDS 또는 Aurora의 자격증명을 여러 리전에서 교체하기 위한 솔루션
