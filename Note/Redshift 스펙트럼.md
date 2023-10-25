@@ -1,5 +1,7 @@
 ## Amazon Redshift 스펙트럼
 
+![image](https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2017/07/18/redshift_spectrum-1.gif)
+
 1. **별도의 서비스**: Redshift 스펙트럼은 Amazon Redshift와는 별도로 동작하는 서비스입니다.
 
 2. **S3 데이터 직접 쿼리**: Redshift 스펙트럼을 사용하면, Amazon S3에 저장된 데이터를 직접 쿼리할 수 있습니다. 따라서 Amazon Redshift의 테이블로 데이터를 별도로 로드하거나 이동할 필요가 없습니다.
