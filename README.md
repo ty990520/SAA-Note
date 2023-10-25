@@ -4,6 +4,7 @@
 - Amazon Athena
   - S3버킷에 저장된 데이터를 분석하는 서버리스 쿼리 서비스
   - 서버리스 SQL엔진을 사용한 S3 데이터 분석 시 사용
+  - Amazon S3에 Parquet, CSV, JSON 등의 형식으로 저장된 데이터를 SQL로 작성해서 SQL로 반환
 - AWS Data Exchange
 - AWS Data Pipeline
 - Amazon EMR
@@ -18,6 +19,12 @@
     -   작업 북마크 : 이미 처리된 데이터를 다시 처리하지 않도록 함
 - Amazon Kinesis
   - 수 천 개의 edge 장치로부터 경고 수집 및 저장
+  - Kinesis Data Streams
+    - 향상된 팬아웃(Enhanced Fanout) : 스트림으로부터 병렬로 데이터를 검색하는 다수의 컨슈머가 있는 경우 적합
+  - Kinesis Data Firehose
+    -  스트리밍 데이터를 데이터 레이크, 데이터 스토어, 분석 도구에 안정적으로 로딩
+    -  S3, Redshift, Elasticsearch, Splunk에만 사용 가능
+    -  
 - AWS Lake Formation
   - 데이터 레이크를 설정, 보호 및 관리 
 - Amazon Managed Streaming for Apache Kafka(Amazon MSK)
@@ -29,6 +36,9 @@
   - 적절한 사용자 및 그룹과 대시보드를 공유 가능
   - IAM 역할 및 권한을 사용하여 액세스 수준 제어 가능
 - Amazon Redshift
+  - 대규모 데이터셋의 저장과 분석을 위한 데이터베이스
+  - 완전관리형 페타바이트 스케일 데이터 웨어하우스
+  - [Redshift Spectrum](https://github.com/ty990520/SAA-Note/blob/main/Note/Redshift%20%EC%8A%A4%ED%8E%99%ED%8A%B8%EB%9F%BC.md) : Redshift 테이블에 데이터를 로딩할 필요 없이 Amazon S3 안의 파일에서 구조화/반구조화 데이터 쿼리,검색 가능
 
 ## 애플리케이션 통합
 - Amazon AppFlow
@@ -46,6 +56,8 @@
 - Amazon Simple Queue Service(Amazon SQS)
   - 마이크로서비스, 분산 시스템 및 서버리스 애플리케이션을 분리하고 확장할 수 있는 완전관리형 메시지 대기열 서비스
   - 가시성 시간 제한 : 다른 소비자가 메시지를 처리할 수 없도록 차단하는 시간
+  - 표준 대기열 : 메시지의 순서가 중요하지 않고, 빠른 처리가 필요한 경우에 적합
+  - FIFO 대기열 : 메시지가 전송된 순서대로 정확히 한 번 처리되도록 보장
 - AWS Step Functions
 
 ## AWS 비용 관리
@@ -101,6 +113,9 @@
 - Amazon ElastiCache
 - Amazon Keyspaces (for Apache Cassandra)
 - Amazon Neptune
+  - 서버리스 데이터 그래프 데이터베이스
+  - 그래프 쿼리 언어인 Gremlin 및 SPARQL을 지원
+  - 소셜 네트워킹, 추천 엔진, 지식 그래프, 네트워크/IT 운영 분석 등과 같은 복잡한 그래프 데이터베이스 쿼리에 적합
 - Amazon Quantum Ledger Database(Amazon QLDB)
 - Amazon RDS
   - 스토리지 Auto Scaling : 디스크 공간 부족 시 RDS 용량 자동 증가 (EC2처럼 RDS의 수를 자동으로 확장x)
@@ -247,6 +262,7 @@
 - Amazon GuardDuty
   - 계정 보호 서비스
   - AWS 계정 및 환경에서 악의적 활동을 모니터링하고 상세한 보안 결과를 제공하여 가시성 및 해결을 촉진하는 위협 탐지 서비스
+  - 연속적인 메타데이터 스트림, AWS CloudTrail 이벤트, Amazon VPC 플로우 로그, DNS 로그를 대상
 - AWS Identity and Access Management(IAM)
 - Amazon Inspector (검사기)
   - 보안취약점 자동 스캔 -> 권장사항 알림 (자동 조치 X)
