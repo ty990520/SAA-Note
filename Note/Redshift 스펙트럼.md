@@ -2,6 +2,10 @@
 
 ![image](https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2017/07/18/redshift_spectrum-1.gif)
 
+Redshift 스펙트럼을 사용하면 Amazon S3에서 직접 데이터를 쿼리할 수 있기 때문에 Redshift 클러스터 내부에 해당 데이터를 저장할 필요가 없습니다. 예를 들어 Redshift 클러스터에는 최근 1년간의 데이터만 유지하고 싶다면, 1년이 지난 과거 데이터는 S3에 저장한 후, 필요할 때 Redshift 스펙트럼을 통해 쿼리하면 됩니다. 이 방법으로 스토리지 비용을 절약할 수 있습니다.
+
+### 특징
+
 1. **별도의 서비스**: Redshift 스펙트럼은 Amazon Redshift와는 별도로 동작하는 서비스입니다.
 
 2. **S3 데이터 직접 쿼리**: Redshift 스펙트럼을 사용하면, Amazon S3에 저장된 데이터를 직접 쿼리할 수 있습니다. 따라서 Amazon Redshift의 테이블로 데이터를 별도로 로드하거나 이동할 필요가 없습니다.
