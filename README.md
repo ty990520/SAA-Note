@@ -44,7 +44,6 @@
 - Amazon AppFlow
   - SaaS 애플리케이션과 S3 및 RedShift와 같은 AWS서비스 간에 데이터를 안전하게 전송
   - Salesforce, SAP, Zendesk, Slack, ServiceNow 등
-  - 완전 관리형
 - AWS AppSync
 - Amazon EventBridge(Amazon CloudWatch Events)
   - 서버리스 이벤트 브로커 
@@ -127,6 +126,7 @@
 
 ## 개발자 도구
 - AWS X-Ray
+  - 문제 및 성능 병목 현상의 근본 원인을 찾을 수 있게 요청 추적을 통해 마이크로서비스 애플리케이션을 디버깅하고 분석 
 
 ## 프런트 엔드 웹 및 모바일
 - AWS Amplify
